@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const soldeMaison = document.getElementById("computerBalance");
   const zoneMessage = document.getElementById("messageArea");
 
+  // Si on n'est pas sur la page de jeu, on arrête ici
+  if (!selectTypePari) return;
+
   // On remplit le select avec les nombres de 1 à 36
   for (let i = 1; i <= 36; i++) {
     const option = document.createElement("option");

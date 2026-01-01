@@ -1,10 +1,10 @@
-<!-- Page principale du jeu de roulette -->
+<!-- Page d'accueil du Casino Royal -->
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casino Royal - Roulette</title>
+    <title>Bienvenue au Casino Royal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,55 +14,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container welcome-container">
       <header>
         <h1>Casino Royal</h1>
-        <p>Faites vos jeux !</p>
+        <p class="subtitle">Le luxe à portée de main</p>
       </header>
 
-      <main>
-        <div class="game-area">
-          <div class="wheel-container">
-            <div class="wheel" id="wheel">
-              <!-- Simplified visual representation -->
-              <div class="number"></div>
+      <main class="welcome-content">
+        <div class="banner">
+          <div class="chip-decoration">♠ ♥ ♣ ♦</div>
+          <h2>Tentez votre chance à la Roulette !</h2>
+          <p>
+            Plongez dans l'univers excitant du jeu. Misez sur vos numéros
+            favoris, défiez le hasard et repartez peut-être avec le jackpot.
+          </p>
+
+          <div class="features">
+            <div class="feature-item">
+              <span class="icon">🎲</span>
+              <span>Jeu équitable</span>
             </div>
-            <div class="result-display" id="resultDisplay">?</div>
+            <div class="feature-item">
+              <span class="icon">💰</span>
+              <span>Gains x35</span>
+            </div>
+            <div class="feature-item">
+              <span class="icon">🚀</span>
+              <span>Rapide & Fun</span>
+            </div>
           </div>
 
-          <div class="controls">
-            <div class="input-group">
-              <label for="betType">Type de pari</label>
-              <select id="betType">
-                <option value="pair">Pair</option>
-                <option value="impair">Impair</option>
-                <!-- Numbers will be populated by JS -->
-              </select>
-            </div>
-
-            <div class="input-group">
-              <label for="betAmount">Mise (x 1000 FCFA)</label>
-              <input type="number" id="betAmount" min="1" value="10" />
-            </div>
-
-            <button id="playBtn">Go !</button>
-          </div>
+          <a href="jeu.html" class="cta-button">Entrer dans le Casino</a>
         </div>
-
-        <div class="wallets">
-          <div class="wallet player-wallet">
-            <h3>Joueur</h3>
-            <div class="balance" id="playerBalance">100</div>
-          </div>
-          <div class="wallet computer-wallet">
-            <h3>Casino</h3>
-            <div class="balance" id="computerBalance">0</div>
-          </div>
-        </div>
-
-        <div id="messageArea" class="message-area"></div>
       </main>
+
+      <footer>
+        <p>&copy; 2026 Casino Royal. Jouez de manière responsable.</p>
+      </footer>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
